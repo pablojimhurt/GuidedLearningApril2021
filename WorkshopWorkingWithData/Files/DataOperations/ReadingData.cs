@@ -35,7 +35,7 @@ namespace WorkshopWorkingWithData.Files.DataOperations
 		internal Tuple<DataTable, string> GetAllContactsCustomQuery()
 		{
 
-			CustomQuery custom = new CustomQuery(UserConnection, "Select \"Id\", \"Name\", \"Phone\", \"Email\" from public.\"Contact\"");
+			CustomQuery custom = new CustomQuery(UserConnection, "Select Id, Name, Phone, Email from Contact");
 			DataTable dt;
 
 			using (DBExecutor dbExecutor = UserConnection.EnsureDBConnection(QueryKind.General))
